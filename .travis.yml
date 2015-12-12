@@ -20,5 +20,5 @@ deploy:
     repo: Klazz/test-unity3d-travisci
 
 before_script:
- - chmod +x ./Scripts/install.sh
- - chmod +x ./Scripts/build.sh
+ - chmod +x install.sh
+ - chmod +x build.sh
