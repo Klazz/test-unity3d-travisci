@@ -1,0 +1,17 @@
+language: objective-c
+osx_image: xcode61
+rvm:
+- 2.1.2
+install:
+- ./Scripts/install.sh
+script:
+- ./Scripts/build.sh
+deploy:
+  provider: s3
+  access_key_id: AKIAJBGXKLRXW5UWT5GQ
+  secret_access_key:
+    secure: R2T8l8CREfx2cxeVnfovOwnZt1KvsqTiHG5qwjRQ2mQ5jWM7BB2fgUshr8PtmHsHQFdbwprxwTh158dWGaqMTQN28KrXTWQLr7d/8k34TMCjnzP9LK4r9aErxae4w5XR+7HOPGDJ5SowKcLvrUh2uAF9RfpXAq138btFLec5iD9Ow/7ZVWBjFJWkcMxj0ar8XeWw40RsYCgjruAVarzzEUfefK9ZRM/Khua2VVedjqlnyHk470q+/rLD2sdY5CNCwvIsenkHTjGay+T8MLDSNrNQmVv1BAeOcnPlQ2t/Wc8zI3aaBJywx5ddlbKIpVDVebuRGI7MwX1D9NXsTGBbqkUkhno6VUEEdtQ/vtoDzXQN9OpYn+N1yQZuq8RHd1McrwG8lBXQYUQbf3npDrey7S+sf7sA+HbZZeFdBFFxCpqdzQyOwJRHT8X6NfNomkNeRnkBh3a3txqptT64hK2FgoNIypriUj+lCrHyV0v0NzdPearVsLyg39SmQHoqdd34UrgupsqnSVhSq6Qd/s+MDCe6wqcbREMSxfJw6qeswj9+znsduBMTemvVUkPS9ywr7aWFhqOZ0qhPODRp5CHbkj+LEzo6cCYSVrtyYFqXRMZan1OWi1G4fJA8URbYjb4bmgshUkoiQV7WOHxWmYl85PM7wCRpB1VbkZGzjaIo6M0=
+  bucket: testunitytravis
+  acl: ''
+  on:
+    repo: Klazz/test-unity3d-travisci
